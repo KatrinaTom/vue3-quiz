@@ -40,3 +40,7 @@ Rendering the cards
 
 <img src="./src/assets/screenshots/rendering_cards.png" width="300" />
 
+Search Functionality
+
+<img src="./src/assets/screenshots/search.png" width="300" />
+
