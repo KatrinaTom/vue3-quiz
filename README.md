@@ -44,3 +44,11 @@ Search Functionality
 
 <img src="./src/assets/screenshots/search.png" width="300" />
 
+## notes
+
+* Installing the vue router ``npm install vue-router``
+
+- Add a folder / router 
+- Add a file to the router folder / index.js
+- Add the createRouter 
+
