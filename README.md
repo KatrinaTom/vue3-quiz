@@ -44,7 +44,7 @@ Search Functionality
 
 <img src="./src/assets/screenshots/search.png" width="300" />
 
-## notes
+## Vue Router
 
 * Installing the vue router ``npm install vue-router``
 
