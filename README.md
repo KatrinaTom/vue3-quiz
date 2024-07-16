@@ -9,12 +9,12 @@ Course is from Udemy by instructor: Laith Harb
 Overview of the Quiz Game
 
 **Quiz game**
-* View different quizzes - Display Cards 
-* Search for a particular quiz - Search Bar / Filter results
-* Quiz Cards - Navigate to that Quiz Type (Routes) 
-* Display Quiz - Display questions and able to select Answer 
-* Display animated results
 
+- View different quizzes - Display Cards
+- Search for a particular quiz - Search Bar / Filter results
+- Quiz Cards - Navigate to that Quiz Type (Routes)
+- Display Quiz - Display questions and able to select Answer
+- Display animated results
 
 ## Project Setup
 
@@ -46,9 +46,12 @@ Search Functionality
 
 ## Vue Router
 
-* Installing the vue router ``npm install vue-router``
+- Installing the vue router `npm install vue-router`
 
-- Add a folder / router 
-- Add a file to the router folder / index.js
-- Add the createRouter 
+* Add a folder / router
+* Add a file to the router folder / index.js
+* Add the createRouter
 
+## Quiz Page
+
+<img src="./src/assets/screenshots/quiz_template.png" width="300" />
