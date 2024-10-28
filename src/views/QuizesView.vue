@@ -9,6 +9,14 @@
       <Card v-for="quiz in quizes" :key="quiz.id" :quiz="quiz" />
     </div>
   </div>
+
+  <div>
+    <p>Learn about animations and transitions.</p>
+    <Transition name="animate">
+      <h2 v-if="showMe">Hello World</h2>
+    </Transition>
+    <button @click="showMe = !showMe">Toggle Me!</button>
+  </div>
 </template>
 
 <script setup>
@@ -18,6 +26,8 @@ import q from "../data/quizes.json";
 
 const search = ref("");
 const quizes = ref(q);
+
+const showMe = ref(true);
 
 watch(search, () => {
   quizes.value = q.filter((quiz) =>
@@ -55,5 +65,17 @@ header input {
   display: flex;
   flex-wrap: wrap;
   margin-top: 40px;
+}
+
+.animate-enter-form {
+  background-color: lightblue;
+}
+
+.animate-enter-to {
+  background-color: aquamarine;
+}
+
+.animate-enter-active {
+  transition: all 5s ease;
 }
 </style>
