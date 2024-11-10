@@ -12,10 +12,13 @@
 
   <div>
     <p>Learn about animations and transitions.</p>
-    <Transition name="animate">
-      <h2 v-if="showMe">Hello World</h2>
-    </Transition>
-    <button @click="showMe = !showMe">Toggle Me!</button>
+    <div class="container">
+      <Transition name="fade">
+        <h2 v-if="showGreet">Hello World</h2>
+        <h2 v-else>Goodbye World</h2>
+      </Transition>
+      <button @click="showGreet = !showGreet">Toggle Me!</button>
+    </div>
   </div>
 </template>
 
@@ -27,7 +30,7 @@ import q from "../data/quizes.json";
 const search = ref("");
 const quizes = ref(q);
 
-const showMe = ref(true);
+const showGreet = ref(true);
 
 watch(search, () => {
   quizes.value = q.filter((quiz) =>
@@ -67,15 +70,43 @@ header input {
   margin-top: 40px;
 }
 
-.animate-enter-form {
-  background-color: lightblue;
+.fade-enter-from {
+  /* background-color: lightblue; */
+  opacity: 0;
 }
 
-.animate-enter-to {
-  background-color: aquamarine;
+.fade-enter-to {
+  /* background-color: aquamarine; */
+  opacity: 1;
 }
 
-.animate-enter-active {
-  transition: all 5s ease;
+.fade-enter-active {
+  transition: all 1s ease;
+}
+
+.fade-leave-from {
+  /* background-color: lightblue; */
+  opacity: 1;
+}
+
+.fade-leave-to {
+  /* background-color: aquamarine; */
+  opacity: 0;
+}
+
+.fade-leave-active {
+  transition: all 1s ease;
+}
+
+.container {
+  position: relative;
+}
+
+h2 {
+  position: absolute;
+}
+
+button {
+  margin-top: 50px;
 }
 </style>
