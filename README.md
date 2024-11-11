@@ -55,3 +55,9 @@ Search Functionality
 ## Quiz Page
 
 <img src="./src/assets/screenshots/quiz_template.png" width="300" />
+
+## Animations
+
+<video width="320" height="240" controls>
+    <source src="./src/assets/screenshots/AnimationVideo.mov">
+</video>

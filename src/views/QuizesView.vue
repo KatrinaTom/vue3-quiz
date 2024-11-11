@@ -6,11 +6,13 @@
     </header>
 
     <div class="options-container">
-      <Card v-for="quiz in quizes" :key="quiz.id" :quiz="quiz" />
+      <TransitionGroup name="card" appear>
+        <Card v-for="quiz in quizes" :key="quiz.id" :quiz="quiz" />
+      </TransitionGroup>
     </div>
   </div>
 
-  <div>
+  <!-- <div>
     <p>Learn about animations and transitions.</p>
     <div class="container">
       <Transition name="fade">
@@ -19,7 +21,7 @@
       </Transition>
       <button @click="showGreet = !showGreet">Toggle Me!</button>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
@@ -70,35 +72,35 @@ header input {
   margin-top: 40px;
 }
 
-.fade-enter-from {
+/* .fade-enter-from {
   /* background-color: lightblue; */
-  opacity: 0;
-}
+/* opacity: 0;
+} */
 
-.fade-enter-to {
-  /* background-color: aquamarine; */
-  opacity: 1;
-}
+/* .fade-enter-to { */
+/* background-color: aquamarine; */
+/* opacity: 1;
+} */
 
-.fade-enter-active {
+/* .fade-enter-active {
   transition: all 1s ease;
-}
+} */
 
-.fade-leave-from {
-  /* background-color: lightblue; */
-  opacity: 1;
-}
+/* .fade-leave-from { */
+/* background-color: lightblue; */
+/* opacity: 1;
+} */
 
-.fade-leave-to {
-  /* background-color: aquamarine; */
-  opacity: 0;
-}
+/* .fade-leave-to { */
+/* background-color: aquamarine; */
+/* opacity: 0;
+} */
 
-.fade-leave-active {
+/* .fade-leave-active {
   transition: all 1s ease;
-}
+} */
 
-.container {
+/* .container {
   position: relative;
 }
 
@@ -108,5 +110,21 @@ h2 {
 
 button {
   margin-top: 50px;
+} */
+
+/* CARD TRANSITION */
+
+.card-enter-from {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.card-enter-to {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.card-enter-active {
+  transition: all 0.4s ease;
 }
 </style>
