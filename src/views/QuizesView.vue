@@ -6,7 +6,7 @@
     </header>
 
     <div class="options-container">
-      <TransitionGroup name="card" appear>
+      <TransitionGroup name="card" appear @before-enter="beforeEnter">
         <Card v-for="quiz in quizes" :key="quiz.id" :quiz="quiz" />
       </TransitionGroup>
     </div>
@@ -32,7 +32,11 @@ import q from "../data/quizes.json";
 const search = ref("");
 const quizes = ref(q);
 
-const showGreet = ref(true);
+// const showGreet = ref(true);
+
+const beforeEnter = () => {
+  console.log("beforeEnter");
+}
 
 watch(search, () => {
   quizes.value = q.filter((quiz) =>
